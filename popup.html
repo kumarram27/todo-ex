@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="head">
+            Todo List
+        </h2>
+        <div class="create_todo">
+            <input type="text" id="todo" placeholder="Add todos..">
+            <button id="addButton">
+                <i class='bx bx-plus'></i>
+            </button>
+        </div>
+        <div class="task_list" id="task_list"></div>
+        <div class="foot">
+            <span><span id="countPendingTasks"></span><span id="text"></span></span>
+            <button id="clearAllButton">Clear All</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

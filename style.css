@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+body {
+    background: linear-gradient(to top, #0067E0, #07A4FD);
+    width: 300px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 75%;
+    border-radius: 6px;
+}
+.container {
+    width: 90%;
+    padding: 25px;
+    max-height: 330px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+}
+.head {
+    padding-bottom: 15px;
+    border-bottom: solid 1.5px #fff;
+}
+.create_todo {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    min-height: 35px;
+}
+.create_todo input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 85%;
+    padding: 0 10px;
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+.create_todo input:focus {
+    outline: solid 3px #ededed;
+}
+button:focus {
+    outline: solid 3px #07A4FD30;
+}
+.create_todo button {
+    border: none;
+    width: 35px;
+    outline: none;
+    background: #07A4FD;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.create_todo button:focus , .create_todo button:hover {
+    outline: solid 3px #07A4FD50;
+}
+.task_list {
+    overflow-y: auto;
+}
+.task_list::-webkit-scrollbar {
+    width: 0;
+}
+.task {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.task span {
+    flex: 1;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.task input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+    background: #f1f1f1;
+    border-radius: 6px;
+    width: 100%;
+}
+.task .check_btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: solid 2px #07A4FD;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    cursor: pointer;
+    
+}
+.task .check_btn i {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: var(--background);
+    display: grid;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.task .edit_btn {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    cursor: pointer;
+    color: #808080;
+}
+.task .delete_btn {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    cursor: pointer;
+    color: #808080;
+}
+.task .save-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    cursor: pointer;
+    color: #808080;
+}
+.task .edit_btn:hover {
+    background: #c1e1cf;
+    color: rgb(6, 105, 26);
+}
+.task .delete_btn:hover {
+    background: #ffc9c9;
+    color: rgb(233, 18, 18);
+}
+.task .delete_btn:focus {
+    outline: solid 3px #ededed;
+}
+.task.true .check_btn {
+    background: #07A4FD;
+}
+.task.true .check_btn i {
+    color: white;
+}
+.task.true span {
+    text-decoration: line-through;
+    color: #808080;
+}
+.task.true .delete_btn {
+    opacity: 0.5;
+}
+.task.true .edit_btn {
+    opacity: 0.5;
+}
+.foot {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: solid 1.5px #eee;
+    font-size: 15px;
+}
+.foot button {
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    background: #07A4FD;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.1s;
+}
+.foot button:hover {
+    outline: solid 4px #07A4FD40;
+}
